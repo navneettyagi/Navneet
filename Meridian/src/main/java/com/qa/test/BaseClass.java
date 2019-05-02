@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Properties;
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -16,12 +15,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -45,7 +42,7 @@ public class BaseClass
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		
-		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
+		
 		
 	}
 	
@@ -231,10 +228,10 @@ public class BaseClass
 
 	
 	
-	/*@AfterSuite
+	@AfterSuite
 	public void tearDown()
 	{
 		driver.close();
-	}*/
+	}
 		
 }
