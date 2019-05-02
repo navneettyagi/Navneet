@@ -51,7 +51,8 @@ public class Login extends BaseClass
 		Utility.checkPageIsReady();
 		Assert.assertTrue(driver.findElement(By.id("ctl00_MainContent_lblWelcome")).isDisplayed());
 		logger.info("User Home page verified");
-		logger.info("User Login successfully");		
+		logger.info("User Login successfully ");
+		System.out.println("Pass");
 	}
 
 	
